@@ -19,6 +19,11 @@ class Solution:
 
 		return False
 
+	def pythonic_way(self, array, target):
+		result = next((True for sub_array in array if target in sub_array), False)
+		
+		return result
+
 class Test(unittest.TestCase):
 	@classmethod
 	def setUpClass(cls):
@@ -30,6 +35,7 @@ class Test(unittest.TestCase):
 				 	[39, 45, 80],
 				]
 		self.assertTrue(self.s.find_num_in_two_d_array(array, 45))
+		self.assertTrue(self.s.pythonic_way(array, 45))
 
 	def test_target_not_in_array(self):
 		array = [ 	[3, 5, 7],
@@ -37,7 +43,8 @@ class Test(unittest.TestCase):
 				 	[39, 45, 80],
 				]
 
-		self.assertTrue(self.s.find_num_in_two_d_array(array, 45))
+		self.assertFalse(self.s.find_num_in_two_d_array(array, 99))
+		self.assertFalse(self.s.pythonic_way(array, 99))
 
 if __name__ == '__main__':
 	unittest.main()
