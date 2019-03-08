@@ -1,4 +1,5 @@
 
+#懒汉
 class SingletonStrict:
 	"""Restrict to only one object by modifying __new__"""
 	class __SingletonStrict:
