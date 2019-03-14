@@ -6,7 +6,7 @@ def odd_existance_num_in_list(int_list):
     xor each element in the list, the value will be the one exist odd times
     xor: (A and not B) or (not A and B)
     """
-    if not int_list or not isinstance(int_list, list):
+    if int_list is None or not isinstance(int_list, list):
         return None
 
     # ^ on int is bitwise

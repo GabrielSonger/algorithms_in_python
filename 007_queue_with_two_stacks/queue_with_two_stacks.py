@@ -1,21 +1,21 @@
 
 class QueueWithTwoStacks:
-	def __init__(self):
-		self.stack1 = []
-		self.stack2 = []
+    def __init__(self):
+        self.stack1 = []
+        self.stack2 = []
 
-	def push(self, element):
-		self.stack1.append(element)
+    def push(self, element):
+        self.stack1.append(element)
 
-	def pop(self):
-		if not self.stack1 and not self.stack2:
-			return None
+    def pop(self):
+        if not self.stack1 and not self.stack2:
+            return None
 
-		if not self.stack2:
-			while self.stack1:
-				self.stack2.append(self.stack1.pop())
+        if not self.stack2:
+            while self.stack1:
+                self.stack2.append(self.stack1.pop())
 
-		return self.stack2.pop()
+        return self.stack2.pop()
 
 
 q = QueueWithTwoStacks()
@@ -26,5 +26,5 @@ print (q.pop())
 print (q.pop())
 print (q.pop())
 
-	
+
 

@@ -9,7 +9,6 @@ def max_subarray(array):
     if not array or not isinstance(array, list):
         return None
 
-    arr_len = len(array)
     max_sum = 0
     cur_sum = 0
 
