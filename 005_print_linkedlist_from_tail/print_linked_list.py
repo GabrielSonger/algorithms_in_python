@@ -8,12 +8,12 @@ class Node:
 
 class Solution:
 
-    def print_list_from_tail_to_head(self, Node):
-        if not Node:
+    def print_list_from_tail_to_head(self, node):
+        if node is None:
             return []
 
         output_list = []
-        current_node = Node
+        current_node = node
 
         while current_node:
             output_list.insert(0, current_node.val)

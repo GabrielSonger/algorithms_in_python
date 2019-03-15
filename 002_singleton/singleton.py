@@ -1,13 +1,20 @@
+"""
+饿汉
+Create and init class in another file. When first imported, .pyc file will be crated
+and only loads .pyc file after the first time.
+
+"""
 
 #懒汉
 class SingletonStrict:
 	"""Restrict to only one object by modifying __new__"""
 	class __SingletonStrict:
 		def __init__(self):
-			self.val = None
-
-		def __str__(self):
-			return self.val
+			pass
+		# 	self.val = None
+        #
+		# def __str__(self):
+		# 	return self.val
 
 	instance = None
 
@@ -43,19 +50,13 @@ class SingletonBorg(Borg):
 
 #Test
 strict_x = SingletonStrict()
-strict_x.val = 'cat'
-print (strict_x)
-
 strict_y = SingletonStrict()
-strict_y.val = 'dog'
-print (strict_y)
-
-strict_z = SingletonStrict()
-strict_z.val = 'zebra'
-print (strict_z)
 print (strict_x)
 print (strict_y)
 
+strict_x.val = 'a'
+print (strict_x.val)
+print (strict_y.val)
 
 borg_x = SingletonBorg('x')
 print (borg_x)

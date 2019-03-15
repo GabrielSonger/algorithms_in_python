@@ -1,5 +1,6 @@
 import unittest
 
+
 class Solution:
     def find_num_in_two_d_array(self, array, target):
         if not isinstance(array, list) or not isinstance(target, int):
@@ -7,7 +8,6 @@ class Solution:
 
         row = 0
         column = len(array[0]) - 1
-
 
         while row < len(array[0]) and column > 0:
             if array[row][column] == target:
