@@ -4,7 +4,7 @@ import unittest
 class BubbleSort:
     def bubble_sort(self, nums):
         if nums is None:
-            return
+            return None
 
         for i in range(len(nums) - 1):
             for j in range(0, len(nums) - i - 1):
@@ -12,7 +12,6 @@ class BubbleSort:
                     nums[j], nums[j+1] = nums[j+1], nums[j]
 
         return nums
-
 
 class Test(unittest.TestCase):
     @classmethod
